@@ -12,7 +12,7 @@ A high-performance trading bot that interacts with the Pump.fun AMM swap platfor
 
 
 ## 💻 Video
-
+[![Watch the video](https://github.com/husreo/Pump-amm-volum-bot/blob/main/public/vscodess.png)](https://github.com/husreo/Pump-amm-volum-bot/blob/main/public/bandicam%202025-04-11%2018-38-00-440.mp4)
 
 ## 🚀 Getting Started
 
