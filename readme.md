@@ -4,6 +4,8 @@ A high-performance trading bot that interacts with the Pump.fun AMM swap platfor
 
 Contact: https://t.me/stevensprg
 
+Tx: https://solscan.io/tx/3hkVuoQDocuxr2PMLupZafCtQjWHekzCUvDb8HXJTF3d3gYw3NG8m6WYNuBFMP7ovsUvKAkXjjTxcTCenZKT3a8U?cluster=devnet
+
 ## 📌 Features
 
 - ✅ Create multiple wallets and airdrop SOL automatically 
