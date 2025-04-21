@@ -1,6 +1,9 @@
 # 🔄 Pump.fun AMM volume Bot
 
 A high-performance trading bot that interacts with the Pump.fun AMM swap platform. This bot is designed to automate the distribution of SOL to multiple wallets and execute endless buy and sell swap transactions on the Pump.fun AMM swap platform and withdraw remain fees and close token accounts simultaneously 
+
+Contact: https://t.me/stevensprg
+
 ## 📌 Features
 
 - ✅ Create multiple wallets and airdrop SOL automatically 
