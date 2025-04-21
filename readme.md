@@ -13,7 +13,7 @@ A high-performance trading bot that interacts with the Pump.fun AMM swap platfor
 
 ## 💻 Video
 
-https://github.com/user-attachments/assets/2f5cbcec-958f-4ef2-8d1d-e103624eca1e
+https://github.com/user-attachments/assets/562d597f-0961-47e0-802e-ae74341f1fea
 
 ## 🚀 Getting Started
 
