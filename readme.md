@@ -4,7 +4,7 @@ A high-performance trading bot that interacts with the Pump.fun AMM swap platfor
 
 Contact: https://t.me/stevensprg
 
-Tx: https://solscan.io/tx/3hkVuoQDocuxr2PMLupZafCtQjWHekzCUvDb8HXJTF3d3gYw3NG8m6WYNuBFMP7ovsUvKAkXjjTxcTCenZKT3a8U?cluster=devnet
+Tx: https://solscan.io/tx/4ZXTuCu2JKR4tb7o6XmNt8Mm9ELPEjnzqmfy75P8AqaFVAYK3gEHieuxgPqCQuxKeWWt1cWocmKRSjyh6WjXGo6o
 
 ## 📌 Features
 
