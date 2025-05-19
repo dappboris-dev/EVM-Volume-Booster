@@ -1,6 +1,6 @@
-# 🔄 Pump.fun AMM volume Bot
+# 🔄 Solana Raydium & Pump.fun AMM volume Bot
 
-A high-performance trading bot that interacts with the Pump.fun AMM swap platform. This bot is designed to automate the distribution of SOL to multiple wallets and execute endless buy and sell swap transactions on the Pump.fun AMM swap platform and withdraw remain fees and close token accounts simultaneously 
+A high-performance trading bot that interacts with the Pump.fun AMM swap and Raydium CLMM & CPMM platform. This bot is designed to automate the distribution of SOL to multiple wallets and execute endless buy and sell swap transactions on the Pump.fun AMM swap & Raydium platform and withdraw remain fees and close token accounts simultaneously 
 
 Contact: https://t.me/stevensprg
 
@@ -9,10 +9,10 @@ Tx: https://solscan.io/tx/4ZXTuCu2JKR4tb7o6XmNt8Mm9ELPEjnzqmfy75P8AqaFVAYK3gEHie
 ## 📌 Features
 
 - ✅ Create multiple wallets and airdrop SOL automatically 
-- ✅ Buy random amount of tokens on certain pump swap pool
+- ✅ Buy random amount of tokens on certain pump swap and raydium cpmm & clmm pool
 - ✅ Steadly search old wallets & sell tokens & withdraw SOL & close ATA
 - ✅ Auto-logs transactions, volume metrics, and token stats
-- ✅ Well Confirmed PumpSwap SDK for sell & buy & getting pool info & calculate buy, sell amount and so on.
+- ✅ Up to date PumpSwap SDK for sell & buy & getting pool info & calculate buy, sell amount and so on.
 - ✅ Configurable Parameters: Allows customization of buy amounts, intervals, distribution settings, and more..
 
 
