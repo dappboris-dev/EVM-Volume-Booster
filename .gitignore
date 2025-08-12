@@ -1,8 +1,2 @@
 node_modules
-./dist
-./build
-./coverage
-./logs
-./temp
-keypair.json
 .env

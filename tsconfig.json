@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "declaration": true,
-    "declarationMap": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "target": "ES2021",
+    "target": "es2020",
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
-  "include": [
-    "src"
-  ]
+  // "include": [
+  //   "d:/project/on_building/sol + eth/MindAI bot/ETH-volume-tgbot/**/*"
+  // ]
 }

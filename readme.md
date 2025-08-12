@@ -1,69 +1,125 @@
-# 🔄 Solana Raydium & Pump.fun AMM volume Bot
+Here’s a cleaned-up, professional rewrite of your `README.md` while keeping it clear and developer-friendly:
 
-A high-performance trading bot that interacts with the Pump.fun AMM swap and Raydium CLMM & CPMM platform. This bot is designed to automate the distribution of SOL to multiple wallets and execute endless buy and sell swap transactions on the Pump.fun AMM swap & Raydium platform and withdraw remain fees and close token accounts simultaneously 
+---
 
-Contact: https://t.me/stevensprg
+# Volume Trading Bot for EVM Chains
 
-Tx: https://solscan.io/tx/4ZXTuCu2JKR4tb7o6XmNt8Mm9ELPEjnzqmfy75P8AqaFVAYK3gEHieuxgPqCQuxKeWWt1cWocmKRSjyh6WjXGo6o
+## Overview
 
-## 📌 Features
+This bot is designed to simulate trading activity (volume generation) on any **EVM-compatible chain**, including:
 
-- ✅ Create multiple wallets and airdrop SOL automatically 
-- ✅ Buy random amount of tokens on certain pump swap and raydium cpmm & clmm pool
-- ✅ Steadly search old wallets & sell tokens & withdraw SOL & close ATA
-- ✅ Auto-logs transactions, volume metrics, and token stats
-- ✅ Up to date PumpSwap SDK for sell & buy & getting pool info & calculate buy, sell amount and so on.
-- ✅ Configurable Parameters: Allows customization of buy amounts, intervals, distribution settings, and more..
+* Binance Smart Chain (BSC)
+* Ethereum Mainnet
+* Base Chain
+* Other EVM networks
 
+It automates wallet creation, funding, randomized buy/sell operations, and optional fund gathering.
 
-## 💻 Video
+---
 
-https://github.com/user-attachments/assets/562d597f-0961-47e0-802e-ae74341f1fea
+## Technology Stack
 
-## 🚀 Getting Started
+* **Languages:** TypeScript, Solidity
+* **Type:** Automated Trading Bot Script
 
-### 1. Clone the Repo
+---
+
+## Installation & Setup
+
+### 1. Install Dependencies
 
 ```bash
-git clone https://github.com/m4rcu5o/Burn-ATA-Solana.git
-cd Burn-ATA-Solana
+npm install
 ```
-### 2. Clone the Repo
-Fill out .env 
+
+### 2. Configure Environment Variables
+
+Update the `.env` file with your wallet information:
+
 ```env
-MAIN_KEYPAIR_HEX=
-TREASURY_WALLET=
-MAIN_RPC_URL=
-MAIN_WSS_URL=
-DEV_RPC_URL=
-DEV_WSS_URL=
-``` 
-### 3. Figure out initial settings
+ETH_BASE_WALLET_ADDRESS="Your wallet address"
+ETH_BASE_WALLET_PRIVATE_KEY="Your wallet private key"
+```
 
-- Example
+> **Note:** Default RPC endpoints in `.env` are public/free. For better performance, replace them with your own reliable endpoints.
+
+---
+
+### 3. Configure Bot Settings
+
+Open `config.json` and adjust the parameters as needed:
+
 ```typescript
-{
-    isPumpToken: "y",
-    basemint: new web3.PublicKey("Frno4J9Yqdf8uwQKziNyybSQz4bD73mTsmiHQWxhJwGM"),
-    minAndMaxBuy: "0.00001 0.00001",
-    minAndMaxSell: "0.00001 0.00001",
-    delay: "2 3",
-    jitoTipAmt: "0.01",
-    cycles: 3,
-    marketID: "Frno4J9Yqdf8uwQKziNyybSQz4bD73mTsmiHQWxhJwGM"
-}
-```
-### 4. Run with command
+// Randomized trade amounts
+export const amountMax = 0.003; // Maximum trade amount in ETH/BNB
+export const amountMin = 0.001; // Minimum trade amount (must be > 0.001)
 
-Install node modules and run bot with command
+// Minimum fee balance to keep in wallet
+export const fee = 0.001; // Recommended: ≥ 0.01 for more reliable transactions
+
+// Randomized trade intervals (milliseconds)
+export const maxInterval = 30000;
+export const minInterval = 5000;
+
+// Number of generated sub-wallets
+export const subWalletNum = 20;
+
+// Target blockchain
+export const CHAINID: ChainId = ChainId.BSC;
+```
+
+💡 **Example Calculation**:
+If `amountMax = 0.03` and `fee = 0.005` with `subWalletNum = 20`, your base wallet should have:
+
+```
+(0.03 + 0.005) × 20 = 0.7 ETH/BNB
+```
+
+> Using a higher fee value (e.g., 0.01) can help recover funds in case of transaction errors.
+
+---
+
+## Running the Bot
+
+Once configured:
+
 ```bash
-yarn
-yarn dev
+npm run dev
 ```
 
-```package.json
-"start": "node dist/index.js",
-"dev": "ts-node-dev src/index.ts",
-"build": "tsc",
-```
+During execution, a JSON file will be generated to store all generated wallet addresses. You can use this to withdraw funds manually if needed.
+(An automatic fund-gathering feature can be added upon request.)
 
+---
+
+## Features
+
+* Randomized sub-wallet generation
+* Automated funding of trading wallets
+* Randomized buy/sell operations to simulate real market activity
+* Optional manual or automatic fund gathering
+
+---
+
+## Example Transactions
+
+* [BSC Tx 1](https://bscscan.com/tx/0x581cda788080b52fbd5db8c4d3500c22a6c136a07b73e2311d1fc29330d48fe5)
+* [BSC Tx 2](https://bscscan.com/tx/0x8c870cf1721c2c765b45d2b13731bf384ec2e8020552aafb0436c01ded98f2ab)
+* [BSC Tx 3](https://bscscan.com/tx/0xb46d289c48d04dc6cc74849ecd9ef4fff6bf86aa3b16fc231d019b82c7789bc2)
+
+---
+
+## Planned Improvements
+
+* Further randomization of trade amounts
+* Randomized trade frequency (buy/sell patterns)
+* Support for multiple liquidity pools
+
+---
+
+## Contact
+
+* **Telegram:** [@midaBricoll](https://t.me/m4rcu5sol)
+* **Twitter/X:** [@dieharye](https://x.com/Pup5ol)
+
+---
