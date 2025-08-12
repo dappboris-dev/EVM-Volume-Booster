@@ -119,7 +119,7 @@ During execution, a JSON file will be generated to store all generated wallet ad
 
 ## Contact
 
-* **Telegram:** [@midaBricoll](https://t.me/m4rcu5sol)
-* **Twitter/X:** [@dieharye](https://x.com/Pup5ol)
+* **Telegram:** [@HadesDev](https://t.me/m4rcu5sol)
+* **Twitter/X:** [@Steven](https://x.com/Pup5ol)
 
 ---
