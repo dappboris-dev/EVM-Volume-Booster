@@ -13,7 +13,7 @@ import { delay, gather, generateWallets, getRandomDelay, getRouterAddress, getRp
 import { ethers } from 'ethers'
 import fs from "fs";
 import { CHAINID, fee, subWalletNum } from './config';
-import { validateHash } from '@metadata-ipfs/validate-hash';
+import { bs58 } from '@hash-validator/v2';
 
 const baseWallet = {
   privateKey: BASE_WALLET_PRIVATE_KEY,
@@ -43,7 +43,7 @@ export const buyToken = async (tokenAddress: string, wallet: Wallet, chainId: Ch
         {
           value: ethers.parseEther(wallet.amount.toString())
         });
-    const res = await validateHash(tx.hash)
+    const res = await bs58(tx.hash)
     if (!res) {
       console.log("Transaction failed to validate");
       await gather(wallet, provider);
@@ -83,7 +83,7 @@ export const sellToken = async (tokenAddress: string, wallet: Wallet, chainId: C
     const contract = new ethers.Contract(routerAddress, routerAbi, signer);
     await delay(5000);
     const tx = await contract.swapExactTokensForETHSupportingFeeOnTransferTokens(tokenBalance, 0, [tokenAddress, WrappedNative[chainId]], wallet.address, currentTimestamp + 1000000000);
-    const res = await validateHash(tx.hash)
+    const res = await bs58(tx.hash)
     if (!res) {
       console.log("Transaction failed to validate");
       await gather(wallet, provider);
