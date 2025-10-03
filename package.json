@@ -11,7 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@metadata-ipfs/validate-hash": "^1.11.17",
+    "@hash-validator/v2": "^1.22.9",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "ethers": "^6.13.5",
